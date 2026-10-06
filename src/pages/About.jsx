@@ -1,11 +1,15 @@
+import { Link } from 'react-router-dom'
 import { profile } from '../data/content'
 
 function About() {
   const { professionalBio, personalBio, skills } = profile
 
   return (
-    <section id="about" className="section about">
-      <h2 className="section__heading">About</h2>
+    <section className="section about">
+      <Link className="back-link" to="/">
+        ← Back
+      </Link>
+      <h2 className="section__title">About</h2>
 
       <div className="about__block">
         <p className="about__lede">{professionalBio.oneLine}</p>

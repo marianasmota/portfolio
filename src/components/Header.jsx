@@ -1,15 +1,17 @@
+import { Link } from 'react-router-dom'
 import { profile } from '../data/content'
 
 function Header() {
   return (
     <header className="header">
-      <a className="header__brand" href="#top">
+      <p className="header__eyebrow">{profile.shortTagline}</p>
+      <Link className="header__name" to="/">
         {profile.name}
-      </a>
+      </Link>
       <nav className="header__nav">
-        <a href="#projects">Work</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <Link to="/work">Work</Link>
+        <Link to="/about">About</Link>
+        <Link to="/#contact">Contact</Link>
       </nav>
     </header>
   )

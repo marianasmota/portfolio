@@ -1,23 +1,28 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
-import Hero from './components/Hero'
-import About from './components/About'
-import Projects from './components/Projects'
-import Contact from './components/Contact'
 import Footer from './components/Footer'
+import ScrollToHash from './components/ScrollToHash'
+import Home from './pages/Home'
+import About from './pages/About'
+import Work from './pages/Work'
+import CaseStudy from './pages/CaseStudy'
 import './App.css'
 
 function App() {
   return (
-    <>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <ScrollToHash />
       <Header />
       <main>
-        <Hero />
-        <Projects />
-        <About />
-        <Contact />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/work" element={<Work />} />
+          <Route path="/work/:id" element={<CaseStudy />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
       </main>
       <Footer />
-    </>
+    </BrowserRouter>
   )
 }
 

@@ -1,8 +1,12 @@
 export const profile = {
   name: 'Mariana Mota',
   role: 'Product Designer',
+  shortTagline: 'IA, Design, Information',
   tagline:
     'I design the structure underneath the interface — information architecture, taxonomies and conversational behaviour for AI and data-heavy products.',
+  aboutTeaser:
+    "I work at system level: the taxonomy an AI model learns from, the conversation an assistant has, and the interface people use — made consistent.",
+  focusAreas: ['Artificial Intelligence', 'Design', 'Information Architecture'],
   professionalBio: {
     heading: 'Positioning',
     oneLine:
@@ -41,15 +45,19 @@ export const projects = [
     description:
       'Self-initiated case study addressing complexity in crypto interfaces, focused on security, intuitiveness and accessibility.',
     tags: ['UI Design', 'UX Design'],
+    image: 'crypto-wallet.png',
     link: '',
+    status: 'live',
   },
   {
-    id: 'ai-assistant',
-    name: 'AI Assistant',
+    id: 'gloria',
+    name: 'Glor.IA',
     description:
-      'Platform supporting executive decision-making with data insights and visualizations.',
+      'AI designer platform supporting executive decision-making with data insights and visualizations.',
     tags: ['AI UX', 'UX Design', 'Information Architecture'],
+    image: 'gloria.png',
     link: '',
+    status: 'live',
   },
   {
     id: 'ebikes',
@@ -57,6 +65,27 @@ export const projects = [
     description:
       'Converting customer feedback into strategic intelligence through research and machine learning.',
     tags: ['Information Architecture', 'Research'],
+    image: 'ebikes.png',
     link: '',
+    status: 'live',
   },
+  {
+    id: 'personas',
+    name: 'Personas',
+    description: 'Case study in progress.',
+    tags: ['Information Architecture'],
+    image: 'personas.png',
+    link: '',
+    status: 'wip',
+  },
+]
+
+/* Work page filters — label to the project ids it shows.
+   Information Architecture has no explicit list: it means "all",
+   same as its role as the umbrella discipline in profile.focusAreas. */
+export const workFilters = [
+  { label: 'IA Designer', ids: ['gloria', 'personas'] },
+  { label: 'UX/UI', ids: ['crypto-wallet'] },
+  { label: 'Research', ids: ['ebikes'] },
+  { label: 'Information Architecture', ids: null },
 ]

@@ -1,18 +1,19 @@
 :root {
-  --text: #4b4553;
-  --text-h: #08060d;
-  --bg: #fff;
-  --bg-soft: #f7f6f4;
-  --border: #e5e4e7;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
+  /* "Times Now" and "NB International Pro" are licensed fonts — these are
+     free stand-ins until licensed font files are available to self-host. */
+  --font-serif: 'Newsreader', Georgia, serif;
+  --font-title: 'Archivo', Helvetica, Arial, sans-serif;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --text: #080808;
+  --text-h: #080808;
+  --bg: #f5f5f5;
+  --bg-soft: #ededeb;
+  --border: #cfcfcc;
+  --pink: #ff3d82;
 
-  font: 18px/160% var(--sans);
+  font: 18px/160% var(--font-serif);
   letter-spacing: 0.1px;
-  color-scheme: light dark;
+  color-scheme: light;
   color: var(--text);
   background: var(--bg);
   font-synthesis: none;
@@ -24,19 +25,6 @@
 @media (max-width: 1024px) {
   :root {
     font-size: 16px;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #b4afc0;
-    --text-h: #f3f4f6;
-    --bg: #14121a;
-    --bg-soft: #1b1824;
-    --border: #2e2b3a;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
   }
 }
 
@@ -57,26 +45,9 @@ body {
 h1,
 h2,
 h3 {
-  font-weight: 600;
+  font-weight: 400;
   color: var(--text-h);
   line-height: 1.2;
-}
-
-h1 {
-  font-size: 2.75rem;
-  letter-spacing: -0.03em;
-  margin: 0 0 1rem;
-}
-
-h2 {
-  font-size: 1.75rem;
-  letter-spacing: -0.02em;
-  margin: 0 0 1.5rem;
-}
-
-h3 {
-  font-size: 1.125rem;
-  margin: 0 0 0.75rem;
 }
 
 p {
