@@ -45,7 +45,7 @@ export const projects = [
     description:
       'Self-initiated case study addressing complexity in crypto interfaces, focused on security, intuitiveness and accessibility.',
     tags: ['UI Design', 'UX Design'],
-    image: 'crypto-wallet.png',
+    image: 'crypto-wallet.webp',
     link: '',
     status: 'live',
   },
@@ -55,7 +55,7 @@ export const projects = [
     description:
       'AI designer platform supporting executive decision-making with data insights and visualizations.',
     tags: ['AI UX', 'UX Design', 'Information Architecture'],
-    image: 'gloria.png',
+    image: 'gloria.webp',
     link: '',
     status: 'live',
   },
@@ -65,7 +65,7 @@ export const projects = [
     description:
       'Converting customer feedback into strategic intelligence through research and machine learning.',
     tags: ['Information Architecture', 'Research'],
-    image: 'ebikes.png',
+    image: 'ebikes.webp',
     link: '',
     status: 'live',
   },
@@ -74,7 +74,7 @@ export const projects = [
     name: 'Personas',
     description: 'Case study in progress.',
     tags: ['Information Architecture'],
-    image: 'personas.png',
+    image: 'personas.webp',
     link: '',
     status: 'wip',
   },

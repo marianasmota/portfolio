@@ -49,6 +49,21 @@
   text-decoration: underline;
 }
 
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--text);
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--text-h);
+}
+
 main {
   flex: 1;
   width: 100%;
@@ -441,6 +456,13 @@ a.acc-cell {
   margin-bottom: 2.5rem;
 }
 
+.case__closing {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  margin: 2rem auto 0;
+}
+
 .case__block {
   margin-bottom: 3rem;
   font-size: 1.1rem;
@@ -510,6 +532,58 @@ a.acc-cell {
   position: absolute;
   left: 0;
   opacity: 0.5;
+}
+
+.case__intro {
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.case__meta-line {
+  font-family: var(--font-title);
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  opacity: 0.65;
+  margin-bottom: 1.25rem;
+}
+
+.case__intro p:not(.case__meta-line):not(.case__tagline) {
+  font-size: 1.15rem;
+}
+
+.case__tagline {
+  font-style: italic;
+  font-size: 1.35rem;
+  color: var(--text-h);
+  margin-top: 1.5rem;
+  max-width: 50ch;
+}
+
+.case-quote {
+  margin: 1.5rem 0;
+  padding-left: 1.25rem;
+  border-left: 2px solid var(--pink);
+  font-style: italic;
+  font-size: 1.15rem;
+  max-width: 60ch;
+}
+
+.case-image {
+  margin: 1.75rem 0;
+}
+
+.case-image img {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.case-image figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--text);
+  opacity: 0.6;
 }
 
 @media (max-width: 640px) {

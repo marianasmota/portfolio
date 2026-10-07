@@ -12,6 +12,8 @@ function CaseStudy() {
     return <Navigate to="/work" replace />
   }
 
+  const { hero } = study
+
   return (
     <article className="section case">
       <Link className="back-link" to="/work">
@@ -26,48 +28,47 @@ function CaseStudy() {
         alt=""
       />
 
-      <div className="case__block">
-        <h2 className="section__title case__heading">Role</h2>
-        <CaseBlocks blocks={study.role.intro} />
-        <dl className="case-meta">
-          {study.role.meta.map((row) => (
-            <div className="case-meta__row" key={row.label}>
-              <dt>{row.label}</dt>
-              <dd>{row.value}</dd>
+      {hero && (
+        <div className="case__block case__intro">
+          {hero.meta && <p className="case__meta-line">{hero.meta}</p>}
+          {hero.summary && <CaseBlocks blocks={hero.summary} />}
+          {hero.tagline && <p className="case__tagline">{hero.tagline}</p>}
+        </div>
+      )}
+
+      {study.sections.map((section) => (
+        <div className="case__block" key={section.heading}>
+          <h2 className="section__title case__heading">{section.heading}</h2>
+
+          {section.blocks && <CaseBlocks blocks={section.blocks} />}
+
+          {section.meta && (
+            <dl className="case-meta">
+              {section.meta.map((row) => (
+                <div className="case-meta__row" key={row.label}>
+                  <dt>{row.label}</dt>
+                  <dd>{row.value}</dd>
+                </div>
+              ))}
+            </dl>
+          )}
+
+          {section.subsections?.map((sub) => (
+            <div className="case-step" key={sub.heading}>
+              <h3>{sub.heading}</h3>
+              <CaseBlocks blocks={sub.blocks} />
             </div>
           ))}
-        </dl>
-      </div>
+        </div>
+      ))}
 
-      <div className="case__block">
-        <h2 className="section__title case__heading">Problem</h2>
-        <CaseBlocks blocks={study.problem} />
-      </div>
-
-      <div className="case__block">
-        <h2 className="section__title case__heading">Goals</h2>
-        <CaseBlocks blocks={study.goals} />
-      </div>
-
-      <div className="case__block">
-        <h2 className="section__title case__heading">Process</h2>
-        {study.process.map((step) => (
-          <div className="case-step" key={step.heading}>
-            <h3>{step.heading}</h3>
-            <CaseBlocks blocks={step.blocks} />
-          </div>
-        ))}
-      </div>
-
-      <div className="case__block">
-        <h2 className="section__title case__heading">Impact</h2>
-        <CaseBlocks blocks={study.impact} />
-      </div>
-
-      <div className="case__block">
-        <h2 className="section__title case__heading">Insights &amp; Learnings</h2>
-        <CaseBlocks blocks={study.insights} />
-      </div>
+      {study.closingImage && (
+        <img
+          className="case__closing"
+          src={`${import.meta.env.BASE_URL}${study.closingImage}`}
+          alt=""
+        />
+      )}
     </article>
   )
 }

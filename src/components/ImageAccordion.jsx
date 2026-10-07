@@ -148,12 +148,12 @@ const stillness = () =>
 const SHOTS = [
   {
     name: 'crypto-wallet',
-    src: `${import.meta.env.BASE_URL}crypto-wallet.png`,
+    src: `${import.meta.env.BASE_URL}crypto-wallet.webp`,
     pos: '78% 68%',
   },
-  { name: 'gloria', src: `${import.meta.env.BASE_URL}gloria.png`, pos: '75% 70%' },
-  { name: 'ebikes', src: `${import.meta.env.BASE_URL}ebikes.png`, pos: '78% 68%' },
-  { name: 'personas', src: `${import.meta.env.BASE_URL}personas.png`, pos: '78% 68%' },
+  { name: 'gloria', src: `${import.meta.env.BASE_URL}gloria.webp`, pos: '75% 70%' },
+  { name: 'ebikes', src: `${import.meta.env.BASE_URL}ebikes.webp`, pos: '78% 68%' },
+  { name: 'personas', src: `${import.meta.env.BASE_URL}personas.webp`, pos: '78% 68%' },
 ]
 
 /* ══ Image accordion ═══════════════════════════════════════
