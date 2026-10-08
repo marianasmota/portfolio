@@ -149,11 +149,11 @@ const SHOTS = [
   {
     name: 'crypto-wallet',
     src: `${import.meta.env.BASE_URL}crypto-wallet.webp`,
-    pos: '78% 68%',
+    pos: '78% 92%',
   },
-  { name: 'gloria', src: `${import.meta.env.BASE_URL}gloria.webp`, pos: '75% 70%' },
-  { name: 'ebikes', src: `${import.meta.env.BASE_URL}ebikes.webp`, pos: '78% 68%' },
-  { name: 'personas', src: `${import.meta.env.BASE_URL}personas.webp`, pos: '78% 68%' },
+  { name: 'gloria', src: `${import.meta.env.BASE_URL}gloria.webp`, pos: '75% 92%' },
+  { name: 'ebikes', src: `${import.meta.env.BASE_URL}ebikes.webp`, pos: '78% 92%' },
+  { name: 'personas', src: `${import.meta.env.BASE_URL}personas.webp`, pos: '78% 92%' },
 ]
 
 /* ══ Image accordion ═══════════════════════════════════════
@@ -256,7 +256,7 @@ const clamp = (v, lo, hi) => Math.min(hi, Math.max(lo, v))
    Set to this project's four projects (see src/data/content.js)
    instead of Bencho's five — which, per the note below, also
    means dropping one spring in the component itself. */
-const KEEP = ['crypto-wallet', 'gloria', 'ebikes', 'personas']
+const KEEP = ['personas', 'gloria', 'ebikes', 'crypto-wallet']
 /* SHOTS is empty in this project (see note above), so a bare
    `SHOTS.find(...)!` would hand `.map` a row of `undefined`
    and throw on `pic.name`. Falling back to a named, src-less

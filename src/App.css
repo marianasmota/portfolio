@@ -7,8 +7,15 @@
   align-items: center;
   column-gap: 1rem;
   padding: 1.5rem 2rem;
-  background: color-mix(in srgb, var(--bg) 92%, transparent);
-  backdrop-filter: blur(8px);
+  background: transparent;
+  backdrop-filter: blur(0);
+  border-bottom: 1px solid transparent;
+  transition: background-color 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease;
+}
+
+.header--scrolled {
+  background: color-mix(in srgb, var(--bg) 70%, transparent);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
 
@@ -25,7 +32,8 @@
 .header__name {
   grid-column: 2;
   justify-self: center;
-  font-family: var(--font-serif);
+  font-family: var(--font-title);
+  font-weight: 400;
   font-size: 1.6rem;
   text-decoration: none;
   color: var(--text-h);
@@ -107,6 +115,10 @@ main:has(.work) {
 
 /* Projects — Selected work uses the Image Accordion below */
 
+.projects {
+  border-top: none;
+}
+
 .projects .section__title {
   text-align: center;
 }
@@ -122,7 +134,7 @@ main:has(.work) {
 .about-teaser__text {
   font-family: var(--font-serif);
   font-size: 1.15rem;
-  max-width: 60ch;
+  max-width: 80ch;
 }
 
 .focus-list {
@@ -152,10 +164,18 @@ main:has(.work) {
 
 /* About page */
 
+.about {
+  border-top: none;
+}
+
 .about__block {
   margin-bottom: 2rem;
   font-family: var(--font-serif);
   font-size: 1.1rem;
+}
+
+.about__block h3 {
+  margin: 0 0 0.75rem;
 }
 
 .about__lede {
@@ -358,7 +378,7 @@ a.acc-cell {
 
 .work__filter::after {
   content: ',';
-  color: inherit;
+  color: var(--border);
 }
 
 .work__filter:last-child::after {
@@ -379,6 +399,12 @@ a.acc-cell {
   gap: 1.5rem;
 }
 
+.work-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
 .work-card__image {
   position: relative;
   aspect-ratio: 4 / 3;
@@ -391,6 +417,10 @@ a.acc-cell {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /* Cover art is near-square with its wordmark bottom-right;
+     the 4:3 card crops the image's height, so pull the crop
+     down to keep the wordmark instead of centering it away. */
+  object-position: center 88%;
 }
 
 .work-card__overlay {
@@ -408,6 +438,8 @@ a.acc-cell {
 
 .work-card__name {
   margin: 0.9rem 0 0.25rem;
+  font-family: var(--font-title);
+  font-weight: 400;
   font-size: 1.1rem;
 }
 

@@ -1,25 +1,32 @@
 export const profile = {
   name: 'Mariana Mota',
   role: 'Product Designer',
-  shortTagline: 'IA, Design, Information',
+  shortTagline: 'Design, Information Architecture, Technology',
   tagline:
     'I design the structure underneath the interface — information architecture, taxonomies and conversational behaviour for AI and data-heavy products.',
   aboutTeaser:
-    "I work at system level: the taxonomy an AI model learns from, the conversation an assistant has, and the interface people use — made consistent.",
-  focusAreas: ['Artificial Intelligence', 'Design', 'Information Architecture'],
-  professionalBio: {
-    heading: 'Positioning',
-    oneLine:
-      'Product Designer who makes complex, data-heavy and AI-enabled products clear by designing the structure underneath the interface: information architecture, taxonomies and conversational behaviour.',
-    summary:
-      "9+ years in UX (since 2017), 6+ of them in AI and data products (since 2020). I started as an information architect building taxonomies that trained machine learning models, and moved into end-to-end product design at Globo, Latin America's largest media company. There I design AI-enabled tools for advertising and audience intelligence, from first idea to production. I hold a Master's in Information Science focused on taxonomies for recommendation systems, and I teach Information Architecture for a Portugal-based design school.",
-    difference:
-      'Most designers work at screen level; I work at system level. I can design the taxonomy an AI model learns from, the conversation an assistant has, and the interface people use, and make the three consistent.',
-    targetRoles:
-      'Senior Product Designer in AI products, data platforms, internal tools and B2B SaaS. Remote or Europe-based.',
+    'I design the structure underneath complex, data-heavy and AI-enabled products: information architecture, taxonomies and conversational behaviour. I work at system level, not just screen level. I can design the taxonomy an AI model learns from, the conversation an assistant has, and the interface people use, and make the three consistent.',
+  focusAreas: ['Design', 'Information Architecture', 'Technology'],
+  about: {
+    greeting: "Hi, I'm Mariana 👋",
+    intro:
+      'I design the structure underneath complex, data-heavy and AI-enabled products: information architecture, taxonomies and conversational behaviour. I work at system level, not just screen level. I can design the taxonomy an AI model learns from, the conversation an assistant has, and the interface people use, and make the three consistent.',
+    sections: [
+      {
+        heading: 'How I got here',
+        text: "I started in Library and Information Science, learning how people organise and find information. That led me to information architecture, and in 2020 to Birdie, where I built taxonomies that trained machine learning models. Most recently, at Globo, Latin America's largest media company, I've been taking AI-enabled tools for advertising and audience intelligence from first idea to production. I also hold a Master's in Information Science focused on taxonomies for recommendation systems, and I teach Information Architecture at The Starter, a Portugal-based design school.",
+      },
+      {
+        heading: 'How I work',
+        text: "I don't start from the interface. I start from the problem: how people think, what they expect, and where systems fail them. To me, design feels like translation, taking something tacit (a frustration, a need, a behaviour no one has named yet) and turning it into something clear and usable. That tension between rigour and imagination is what drew me to this field, and what keeps me here.",
+      },
+      {
+        heading: "Where I'm based",
+        text: "Rio de Janeiro (GMT-3), with a life shaped by curiosity about the world beyond it. I've worked with distributed teams for over six years and I'm looking for remote roles or roles in Europe.",
+        languages: 'Portuguese (native), English (full professional), Spanish (basic).',
+      },
+    ],
   },
-  personalBio:
-    "Beyond the title: I'm the person who gets curious about why a system is organized the way it is, long before I ask how it looks. I like taking something messy and complex and finding the shape that was already hiding inside it — whether that's a dataset, a taxonomy or a conversation flow. Outside of work, that same curiosity goes into teaching, learning, and generally being the friend who over-researches every decision.",
   skills: [
     'Information Architecture',
     'Systems Thinking',
@@ -51,10 +58,10 @@ export const projects = [
   },
   {
     id: 'gloria',
-    name: 'Glor.IA',
+    name: 'AI Assistant',
     description:
-      'AI designer platform supporting executive decision-making with data insights and visualizations.',
-    tags: ['AI UX', 'UX Design', 'Information Architecture'],
+      "Redesigning Globo's internal AI research assistant: from a UI refresh to the information architecture and conversation behind it.",
+    tags: ['AI UX', 'Conversation Design', 'Information Architecture'],
     image: 'gloria.webp',
     link: '',
     status: 'live',
@@ -72,11 +79,12 @@ export const projects = [
   {
     id: 'personas',
     name: 'Personas',
-    description: 'Case study in progress.',
-    tags: ['Information Architecture'],
+    description:
+      'AI-enabled tool that turns a written persona into ready-to-launch audience segments, built for and used by Globo Ads in production.',
+    tags: ['AI UX', 'Information Architecture', 'UX Research'],
     image: 'personas.webp',
     link: '',
-    status: 'wip',
+    status: 'live',
   },
 ]
 

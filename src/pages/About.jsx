@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { profile } from '../data/content'
 
 function About() {
-  const { professionalBio, personalBio, skills } = profile
+  const { about, skills } = profile
 
   return (
     <section className="section about">
@@ -12,16 +12,17 @@ function About() {
       <h2 className="section__title">About</h2>
 
       <div className="about__block">
-        <p className="about__lede">{professionalBio.oneLine}</p>
-        <p>{professionalBio.summary}</p>
-        <p>{professionalBio.difference}</p>
-        <p className="about__target">{professionalBio.targetRoles}</p>
+        <p className="about__lede">{about.greeting}</p>
+        <p>{about.intro}</p>
       </div>
 
-      <div className="about__block about__block--personal">
-        <h3>A bit more about me</h3>
-        <p>{personalBio}</p>
-      </div>
+      {about.sections.map((s) => (
+        <div className="about__block" key={s.heading}>
+          <h3>{s.heading}</h3>
+          <p>{s.text}</p>
+          {s.languages && <p className="about__target">Languages: {s.languages}</p>}
+        </div>
+      ))}
 
       <div className="about__skills">
         <h3>Skills</h3>

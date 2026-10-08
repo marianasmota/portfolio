@@ -4,7 +4,7 @@ import { projects, workFilters } from '../data/content'
 import { caseStudies } from '../data/caseStudies'
 
 function Work() {
-  const [active, setActive] = useState(workFilters[workFilters.length - 1].label)
+  const [active, setActive] = useState(null)
 
   const activeFilter = workFilters.find((f) => f.label === active)
   const visible = activeFilter?.ids
@@ -19,7 +19,7 @@ function Work() {
             key={f.label}
             type="button"
             className={`work__filter${f.label === active ? ' is-active' : ''}`}
-            onClick={() => setActive(f.label)}
+            onClick={() => setActive((current) => (current === f.label ? null : f.label))}
           >
             {f.label}
           </button>
