@@ -16,7 +16,7 @@ function AboutTeaser() {
       </Link>
       <img
         className="about-teaser__gif"
-        src={`${import.meta.env.BASE_URL}artificial-intelligence-design-ia.gif`}
+        src={`${import.meta.env.BASE_URL}design-ia-technology.gif`}
         alt="Artificial intelligence, design and information architecture"
       />
     </section>

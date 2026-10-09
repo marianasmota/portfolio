@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { profile } from '../data/content'
+import Carousel from '../components/Carousel'
 
 function About() {
   const { about, skills } = profile
@@ -9,6 +10,12 @@ function About() {
       <Link className="back-link" to="/">
         ← Back
       </Link>
+
+      <div className="about__carousel">
+        <Carousel />
+        <p className="about__carousel-caption">me, places and things that I love</p>
+      </div>
+
       <h2 className="section__title">About</h2>
 
       <div className="about__block">

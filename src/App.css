@@ -168,6 +168,22 @@ main:has(.work) {
   border-top: none;
 }
 
+.about__carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.about__carousel-caption {
+  margin: 0.75rem 0 0;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--text);
+  opacity: 0.65;
+}
+
 .about__block {
   margin-bottom: 2rem;
   font-family: var(--font-serif);
@@ -622,5 +638,148 @@ a.acc-cell {
   .case-meta__row {
     grid-template-columns: 1fr;
     gap: 0.25rem;
+  }
+}
+
+/* ══ Carousel ═══════════════════════════════════════════════
+   From Bencho (bencho.dev), MIT licensed — see Carousel.jsx.
+
+   Bencho's design tokens, mapped to this project's own rather
+   than declared as new globals, and scoped to `.car` so none
+   of it leaks past the component:
+     --bg       already a project-wide token (same name), so
+                it resolves on its own — nothing to map.
+     --font-ui  aliased to --font-title, this project's UI/
+                heading font (Bencho uses it for chrome text,
+                which is what --font-title is for here too).
+     --ink-rgb  the project keeps --text as a hex/rgba string
+                for CSS colour values, but Bencho's token wants
+                three bare numbers to build its own rgba()s
+                with. No existing token is in that shape, so
+                it's defined here as the project's ink in both
+                themes, local to the component.
+     --shadow-rgb  referenced by the component's inline
+                boxShadow but not actually one of Bencho's
+                five listed tokens — likely missed in the
+                prompt, since the CSS it ships with depends on
+                it the same way. Shadows read fine as plain
+                black in either theme, so it isn't tied to
+                --ink-rgb.
+     --lift, --sway  set inline per card by the component
+                itself (the drift amplitude), with its own
+                fallback in the keyframes below — nothing to
+                map here. */
+.car {
+  --font-ui: var(--font-title);
+  --ink-rgb: 8 8 8;
+  --shadow-rgb: 0 0 0;
+  position: relative;
+  font-family: var(--font-ui);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .car {
+    --ink-rgb: 237 237 237;
+  }
+}
+
+:root[data-theme='dark'] .car {
+  --ink-rgb: 237 237 237;
+}
+
+/* ── the frame is only a frame ─────────────────────────────
+   No background, no clip, no mask. This was a box that cut
+   the cards at its edges, and before that a mask that faded
+   them out there, and both were answers to the question of
+   what happens to a card when it runs out of block. The cards
+   are on a ring now and never reach an edge, so the question
+   is gone and so is everything that was answering it.
+
+   Which also means nothing here forces `transform-style:
+   flat` any more — overflow and mask both did, and both were
+   safe only because the perspective sits two levels down on
+   `.car-float`. It no longer has to be. */
+.car-track {
+  position: absolute;
+  inset: 0;
+  touch-action: pan-y;
+  cursor: grab;
+}
+
+.car-track[data-held='true'] {
+  cursor: grabbing;
+}
+
+.car-track:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px var(--bg),
+    0 0 0 4px rgba(var(--ink-rgb), 0.4);
+}
+
+/* the slot holds WHERE on the ring and the card's own resting
+   ANGLE, written per frame by the component — so it carries no
+   transition of its own, or the easing and the drag would
+   re-interpolate against each other and what you would see is
+   the transition rather than the finger */
+.car-slot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: center;
+}
+
+/* ── the drift ──────────────────────────────────────────────
+   Keyframes rather than a loop: a rAF per card would be a
+   permanent loop for motion nobody is watching, and a wall
+   holding several of these blocks would run a dozen. This
+   runs on the compositor and pauses itself when the tab
+   hides. The period is set per card and deliberately does not
+   divide into its neighbours' — that is what stops the row
+   breathing in unison.
+
+   The perspective lives HERE, not on the track: on the track
+   a card at the edge of the row would tilt toward the middle
+   of the stage rather than toward the finger on it. Each card
+   is its own object being touched and wants its own vanishing
+   point. */
+.car-float {
+  width: 100%;
+  height: 100%;
+  perspective: 760px;
+  animation: car-bob 5s ease-in-out infinite;
+}
+
+.car-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  /* no transition: the tilt is sprung in the component, and a
+     transition on top would be a second opinion about how this
+     card settles */
+}
+
+.car-sheen {
+  position: absolute;
+  inset: 0;
+  display: block;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .car-float {
+    animation: none;
+  }
+}
+
+@keyframes car-bob {
+  0%,
+  100% {
+    transform: translateY(calc(var(--lift, 4px) * -1)) rotate(calc(var(--sway, 1deg) * -1));
+  }
+  50% {
+    transform: translateY(var(--lift, 4px)) rotate(var(--sway, 1deg));
   }
 }

@@ -40,7 +40,7 @@ export const profile = {
   contact: {
     email: 'marianamk3@gmail.com',
     linkedin: 'https://linkedin.com/in/marianasmota',
-    calendly: 'https://calendly.com/marianamk3/30min',
+    bookCall: 'https://calendar.app.google/iAFWChPJPLbtvi5a7',
     github: 'https://github.com/marianasmota',
   },
 }
