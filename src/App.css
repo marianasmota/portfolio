@@ -675,6 +675,12 @@ a.acc-cell {
   --shadow-rgb: 0 0 0;
   position: relative;
   font-family: var(--font-ui);
+  /* the cards' z-index runs up to 100 so the front of the ring
+     paints over the back — contained here with its own
+     stacking context, or those values compare directly against
+     the rest of the page (the sticky header included) instead
+     of just against each other. */
+  isolation: isolate;
 }
 
 @media (prefers-color-scheme: dark) {
