@@ -913,11 +913,6 @@ export const caseStudies = {
           },
           {
             type: 'image',
-            src: 'personas-journey-map.webp',
-            alt: 'User journey map: stages across objective, doing, thinking and saying, sentiment, opportunities and touchpoint',
-          },
-          {
-            type: 'image',
             src: 'personas-service-blueprint.webp',
             alt: 'Service blueprint showing the with-briefing and without-briefing flows, from advertiser to delivery',
           },
