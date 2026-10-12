@@ -149,11 +149,11 @@ const SHOTS = [
   {
     name: 'crypto-wallet',
     src: `${import.meta.env.BASE_URL}crypto-wallet.webp`,
-    pos: '78% 92%',
+    pos: '100% 92%',
   },
-  { name: 'gloria', src: `${import.meta.env.BASE_URL}gloria.webp`, pos: '75% 92%' },
-  { name: 'ebikes', src: `${import.meta.env.BASE_URL}ebikes.webp`, pos: '78% 92%' },
-  { name: 'personas', src: `${import.meta.env.BASE_URL}personas.webp`, pos: '78% 92%' },
+  { name: 'gloria', src: `${import.meta.env.BASE_URL}gloria.webp`, pos: '100% 92%' },
+  { name: 'ebikes', src: `${import.meta.env.BASE_URL}ebikes.webp`, pos: '100% 92%' },
+  { name: 'personas', src: `${import.meta.env.BASE_URL}personas.webp`, pos: '100% 92%' },
 ]
 
 /* ══ Image accordion ═══════════════════════════════════════
