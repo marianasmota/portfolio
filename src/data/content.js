@@ -47,12 +47,12 @@ export const profile = {
 
 export const projects = [
   {
-    id: 'crypto-wallet',
-    name: 'Crypto Wallet',
+    id: 'personas',
+    name: 'Personas',
     description:
-      'Self-initiated case study addressing complexity in crypto interfaces, focused on security, intuitiveness and accessibility.',
-    tags: ['UI Design', 'UX Design'],
-    image: 'crypto-wallet.webp',
+      'AI-enabled tool that turns a written persona into ready-to-launch audience segments, built for and used by Globo Ads in production.',
+    tags: ['AI UX', 'Information Architecture', 'UX Research'],
+    image: 'personas.webp',
     link: '',
     status: 'live',
   },
@@ -77,12 +77,12 @@ export const projects = [
     status: 'live',
   },
   {
-    id: 'personas',
-    name: 'Personas',
+    id: 'crypto-wallet',
+    name: 'Crypto Wallet',
     description:
-      'AI-enabled tool that turns a written persona into ready-to-launch audience segments, built for and used by Globo Ads in production.',
-    tags: ['AI UX', 'Information Architecture', 'UX Research'],
-    image: 'personas.webp',
+      'Self-initiated case study addressing complexity in crypto interfaces, focused on security, intuitiveness and accessibility.',
+    tags: ['UI Design', 'UX Design'],
+    image: 'crypto-wallet.webp',
     link: '',
     status: 'live',
   },
