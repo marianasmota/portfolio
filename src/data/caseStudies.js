@@ -8,6 +8,15 @@
 // Block = { type: 'p', text } | { type: 'list', items } | { type: 'quote', text }
 export const caseStudies = {
   ebikes: {
+    hero: {
+      meta: 'Birdie · B2B SaaS · Information Architect',
+      summary: [
+        {
+          type: 'p',
+          text: "An e-bike company had plenty of customer feedback and no way to read it at scale. I led the research and designed the taxonomy and ontology the ML model learned from, so marketing and sales got segment-specific insights in users' own language, continuously rather than once.",
+        },
+      ],
+    },
     sections: [
       {
         heading: 'Role',
@@ -829,7 +838,12 @@ export const caseStudies = {
     sections: [
       {
         heading: 'Role',
-        blocks: [{ type: 'p', text: 'Lead UX designer, from first idea to production.' }],
+        blocks: [
+          {
+            type: 'p',
+            text: 'Product designer, the only designer on the team, from first idea to production.',
+          },
+        ],
         meta: [
           {
             label: 'Team',

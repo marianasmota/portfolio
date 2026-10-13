@@ -50,7 +50,7 @@ export const projects = [
     id: 'personas',
     name: 'Personas',
     description:
-      'AI-enabled tool that turns a written persona into ready-to-launch audience segments, built for and used by Globo Ads in production.',
+      'AI audience segmentation at Globo, from first idea to production. −60% time from analysis to cohort.',
     tags: ['AI UX', 'Information Architecture', 'UX Research'],
     image: 'personas.webp',
     link: '',
@@ -60,7 +60,7 @@ export const projects = [
     id: 'gloria',
     name: 'AI Assistant',
     description:
-      "Redesigning Globo's internal AI research assistant: from a UI refresh to the information architecture and conversation behind it.",
+      "Reframed a UI refresh into a redesign of an internal AI assistant's information architecture and conversation.",
     tags: ['AI UX', 'Conversation Design', 'Information Architecture'],
     image: 'gloria.webp',
     link: '',
@@ -70,7 +70,7 @@ export const projects = [
     id: 'ebikes',
     name: 'Ebikes',
     description:
-      'Converting customer feedback into strategic intelligence through research and machine learning.',
+      'The taxonomy and ontology an ML model learned from, turning scattered feedback into a continuous insight system.',
     tags: ['Information Architecture', 'Research'],
     image: 'ebikes.webp',
     link: '',
@@ -80,7 +80,7 @@ export const projects = [
     id: 'crypto-wallet',
     name: 'Crypto Wallet',
     description:
-      'Self-initiated case study addressing complexity in crypto interfaces, focused on security, intuitiveness and accessibility.',
+      'Self-initiated concept: a self-custody wallet designed first for beginners.',
     tags: ['UI Design', 'UX Design'],
     image: 'crypto-wallet.webp',
     link: '',

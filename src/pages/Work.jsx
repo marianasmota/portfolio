@@ -39,6 +39,7 @@ function Work() {
                 <div className="work-card__overlay" aria-hidden="true" />
               </div>
               <h3 className="work-card__name">{project.name}</h3>
+              <p className="work-card__caption">{project.description}</p>
               <p className="work-card__skills">{project.tags.join(', ')}</p>
             </Wrapper>
           )
