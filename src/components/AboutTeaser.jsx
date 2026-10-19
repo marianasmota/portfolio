@@ -6,11 +6,6 @@ function AboutTeaser() {
     <section id="about" className="section about-teaser">
       <h2 className="section__title">About</h2>
       <p className="about-teaser__text">{profile.aboutTeaser}</p>
-      <ul className="focus-list">
-        {profile.focusAreas.map((area) => (
-          <li key={area}>{area}</li>
-        ))}
-      </ul>
       <Link className="about-teaser__link" to="/about">
         Read more →
       </Link>
