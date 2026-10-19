@@ -13,6 +13,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { caseStudies } from '../data/caseStudies'
+import { projects } from '../data/content'
 
 /* ── inlined from lab/spring ──────────────────────── */
 /* ── one spring, for everything that settles ───────────────
@@ -394,7 +395,11 @@ function ImageAccordion({
         const u = swell[i] / 100
         const hasCase = Boolean(caseStudies[pic.name])
         const Cell = hasCase ? Link : 'div'
-        const cellProps = hasCase ? { to: `/work/${pic.name}` } : {}
+        /* the picture's own alt is empty — it's decorative crop,
+           not a description — so the link's accessible name has
+           to come from here instead of from the image. */
+        const projectName = projects.find((p) => p.id === pic.name)?.name
+        const cellProps = hasCase ? { to: `/work/${pic.name}`, 'aria-label': projectName } : {}
         return (
           <Cell
             key={pic.name}

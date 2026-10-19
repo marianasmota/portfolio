@@ -7,6 +7,15 @@ export const profile = {
   aboutTeaser:
     'I design the structure underneath complex, data-heavy and AI-enabled products: information architecture, taxonomies and conversational behaviour. I work at system level, not just screen level. I can design the taxonomy an AI model learns from, the conversation an assistant has, and the interface people use, and make the three consistent.',
   focusAreas: ['Design', 'Information Architecture', 'Technology'],
+  hero: {
+    greeting: "Hi, I'm ",
+    name: 'Mariana Mota',
+    line2: 'a Brazilian product designer based in Barcelona.',
+    paragraphs: [
+      "I came to design from library science, where I learned that information is only useful when someone can find it, and understand what they found. I still think that's most of the job.",
+      'To me, design is translation: taking something tacit, a frustration, a habit, a need no one has named yet, and giving it a structure people can use. Today I do that for AI and data products, where the structure is often invisible: the taxonomy a model learns from, the conversation an assistant has, the interface people use on top of both. I like that work best when rigour and the invisible have to share the same room.',
+    ],
+  },
   about: {
     greeting: "Hi, I'm Mariana 👋",
     intro:

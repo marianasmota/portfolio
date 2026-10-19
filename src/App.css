@@ -113,6 +113,49 @@ main:has(.work) {
   color: var(--text-h);
 }
 
+/* Hero */
+
+.hero {
+  padding: 5rem 0 3rem;
+  text-align: left;
+}
+
+.hero__title {
+  font-family: var(--font-title);
+  font-weight: 400;
+  font-size: clamp(2.2rem, 5.5vw, 4rem);
+  line-height: 1.12;
+  letter-spacing: -0.012em;
+  max-width: 18ch;
+  margin: 0 0 1.75rem;
+  color: var(--text);
+}
+
+.hero__name {
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+.hero__text {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  max-width: 65ch;
+}
+
+.hero__text:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 3.5rem 0 2.5rem;
+  }
+
+  .hero__title {
+    max-width: none;
+  }
+}
+
 /* Projects — Selected work uses the Image Accordion below */
 
 .projects {
