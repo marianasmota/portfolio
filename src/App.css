@@ -163,7 +163,7 @@ main:has(.work) {
 }
 
 .projects .section__title {
-  text-align: center;
+  text-align: left;
 }
 
 @media (max-width: 640px) {
